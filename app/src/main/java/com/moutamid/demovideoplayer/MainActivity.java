@@ -2,6 +2,7 @@ package com.moutamid.demovideoplayer;
 
 import static android.view.LayoutInflater.from;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.media.ThumbnailUtils;
 import android.net.Uri;
@@ -116,7 +117,8 @@ public class MainActivity extends AppCompatActivity {
                     .into(holder.imageView);
 
             holder.parent.setOnClickListener(v -> {
-                Toast.makeText(MainActivity.this, "" + videoItem.getPath(), Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, VideoPlayerActivity.class)
+                        .putExtra("path", videoItem.getPath()));
             });
 
         }
