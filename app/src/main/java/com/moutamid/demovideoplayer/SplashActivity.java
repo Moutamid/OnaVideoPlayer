@@ -44,8 +44,7 @@ public class SplashActivity extends AppCompatActivity {
                                 Toast.makeText(SplashActivity.this, "You need to provide permission!", Toast.LENGTH_SHORT).show();
 
                                 Intent intent = new Intent();
-                                intent.setAction(
-                                        Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+                                intent.setAction(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
                                 Uri uri = Uri.fromParts("package",
                                         BuildConfig.APPLICATION_ID, null);
                                 intent.setData(uri);
