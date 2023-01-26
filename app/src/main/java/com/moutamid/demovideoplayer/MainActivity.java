@@ -12,6 +12,7 @@ import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -65,7 +66,6 @@ public class MainActivity extends AppCompatActivity {
 //                }, 2000);
             }
         });
-
     }
 
     private List<VideoItem> tasksArrayList = new ArrayList<>();

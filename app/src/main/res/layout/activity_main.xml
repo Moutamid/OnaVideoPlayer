@@ -19,7 +19,7 @@
             android:layout_height="@dimen/_30sdp"
             android:layout_centerVertical="true"
             android:scaleType="centerCrop"
-            android:src="@drawable/splash" />
+            android:src="@drawable/logo" />
 
         <TextView
             android:id="@+id/topi"
@@ -34,7 +34,6 @@
             android:textStyle="bold" />
 
     </RelativeLayout>
-
 
     <com.github.ybq.android.spinkit.SpinKitView
         android:id="@+id/spin_kit"
