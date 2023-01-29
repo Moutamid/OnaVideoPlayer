@@ -59,4 +59,6 @@ dependencies {
 
     // Dexter Permission Library
     implementation 'com.karumi:dexter:5.0.0'
+
+    implementation 'com.github.khizar1556.MKVideoPlayer:mkvideoplayer:0.1.5'
 }

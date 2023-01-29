@@ -7,10 +7,14 @@
     android:layout_gravity="center"
     tools:context=".VideoPlayerActivity">
 
-<!--    <com.moutamid.demovideoplayer.FullScreenVideoView-->
-    <VideoView
+    <!--<VideoView
         android:id="@+id/videoView"
         android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />-->
+
+    <include
+        layout="@layout/mk_player"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
