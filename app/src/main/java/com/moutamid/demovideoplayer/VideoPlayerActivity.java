@@ -1,7 +1,9 @@
 package com.moutamid.demovideoplayer;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -25,12 +27,6 @@ public class VideoPlayerActivity extends AppCompatActivity {
         b = ActivityVideoPlayerBinding.inflate(getLayoutInflater());
         setContentView(b.getRoot());
 
-       /* b.videoView.setMediaController(new MediaController(this));
-        b.videoView.setVideoPath(getIntent().getStringExtra("path"));
-        b.videoView.start();*/
-
-//        MKPlayerActivity.configPlayer(this).play(getIntent().getStringExtra("path"));
-
         mkplayer = new MKPlayer(this);
         mkplayer.play(getIntent().getStringExtra("path"));
 
@@ -51,8 +47,32 @@ public class VideoPlayerActivity extends AppCompatActivity {
     }
 
     @Override
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        mkplayer.onConfigurationChanged(newConfig);
+    }
+
+    @Override
     public void onBackPressed() {
-        mkplayer.stop();
+        mkplayer.onBackPressed();
         super.onBackPressed();
+    }
+
+    @Override
+    protected void onPause() {
+        mkplayer.onPause();
+        super.onPause();
+    }
+
+    @Override
+    protected void onResume() {
+        mkplayer.onResume();
+        super.onResume();
+    }
+
+    @Override
+    protected void onDestroy() {
+        mkplayer.onDestroy();
+        super.onDestroy();
     }
 }
